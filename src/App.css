@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Barlow Condensed";
+  color: rgb(208, 214, 249);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bellefair";
+  color: rgb(255, 255, 255);
+}
+
+h1 {
+  font-size: 150px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+h2 {
+  font-size: 100px;
+}
+
+h3 {
+  font-size: 50px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 28px;
+  letter-spacing: 4.75px;
+  color: rgb(208, 214, 249);
+}
