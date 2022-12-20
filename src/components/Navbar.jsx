@@ -1,5 +1,6 @@
 import appLogo from "../assets/shared/logo.svg";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -9,12 +10,12 @@ function Navbar() {
       <NavLinksWrapper>
         <NavLinkList>
           <li>
-            <Navlink href="#">
+            <Navlink to={'/'}>
               <LinkNum>00</LinkNum> HOME
             </Navlink>
           </li>
           <li>
-            <Navlink href="#">
+            <Navlink to={"/destination"}>
               <LinkNum>01</LinkNum> DESTINATION
             </Navlink>
           </li>
@@ -66,7 +67,7 @@ const NavLinksWrapper = styled.div`
     to right,
     rgb(11, 13, 23),
     rgba(208, 214, 249, 0.4),
-    rgba(11, 13, 23, .5)
+    rgba(11, 13, 23, 0.5)
   );
 `;
 
@@ -77,22 +78,35 @@ const NavLinkList = styled.ul`
   justify-content: space-between;
   align-items: center;
   margin-left: 123px;
+  height: 100%;
+
+  & li {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
-const Navlink = styled.a`
+const Navlink = styled(NavLink)`
   text-decoration: none;
   color: rgb(208, 214, 249);
   font-family: Barlow Condensed;
   font-size: 16px;
-  text-align: center;
   letter-spacing: 2.7px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  border: 2px solid transparent;
+  &:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+  }
 `;
 
 const LinkNum = styled.span`
   color: rgb(255, 255, 255);
   font-weight: bold;
+  margin-right: 5px;
 `;
-
-
 
 export default Navbar;

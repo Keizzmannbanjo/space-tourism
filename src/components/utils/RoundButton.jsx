@@ -1,23 +1,21 @@
 import styled from "styled-components";
 
-function RoundButton() {
+function RoundHomeButton() {
   return (
-    <OvalWrapper className="oval-parent">
-      <Oval>
-        <h4 style={{ color: "black" }}>EXPLORE</h4>
-      </Oval>
-    </OvalWrapper>
+    <Oval>
+      <h4 style={{ color: "black" }}>EXPLORE</h4>
+    </Oval>
   );
 }
 
-const OvalWrapper = styled.div`
-width: 450px;
-height:450px;
-border:radius: 50%;
-display:flex;
-justify-content: center;
-align-items: flex-end;
-`;
+// const OvalWrapper = styled.div`
+// width: 400px;
+// height:400px;
+// border-radius: 50%;
+// display:flex;
+// justify-content: center;
+// align-items: center;
+// `;
 
 const Oval = styled.div`
   width: 274px;
@@ -28,7 +26,10 @@ const Oval = styled.div`
   justify-content: center;
   align-items: center;
 
-  &:hover 
+  &:hover{
+    box-shadow: 2px 3px 0px 2rem #979797;
+    cursor: pointer;
+  }
 `;
 
-export default RoundButton;
+export default RoundHomeButton;

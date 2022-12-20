@@ -1,7 +1,6 @@
 import styled from "styled-components";
+import RoundHomeButton from "../components/utils/RoundButton";
 import Navbar from "../components/Navbar";
-import RoundButton from "../components/utils/RoundButton";
-
 import backgroundImg from "../assets/home/background-home-desktop.jpg";
 
 function Home() {
@@ -19,11 +18,12 @@ function Home() {
             world experience!
           </p>
         </TextWrapper>
-        <RoundButton />
+        <RoundHomeButton />
       </ContentWrapper>
     </Wrapper>
   );
 }
+
 
 const Wrapper = styled.div`
   width: 100%;
@@ -32,19 +32,23 @@ const Wrapper = styled.div`
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  min-height:100vh;
 `;
 
+
+
+
 const ContentWrapper = styled.div`
-  width: 1110px;
-  margin: 251px auto 0px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  padding-left: 3rem;
+  padding-right: 5rem;
+  padding-bottom: 4rem;
+  height: 110vh;
 `;
 
 const TextWrapper = styled.div`
   width: 450px;
-  height: 382px;
 `;
-
 export default Home;
